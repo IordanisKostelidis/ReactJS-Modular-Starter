@@ -1,0 +1,57 @@
+{
+  "name": "reactjs-modular-starter-portal",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Iordanis Kostelidis",
+    "email": "ikostelidis@datascouting.com",
+    "url": "https://datascouting.com"
+  },
+  "scripts": {
+    "start-site": "PORT=8001 react-scripts start",
+    "build-site": "react-scripts build",
+    "test-site": "cross-env CI=1 react-scripts test --env=jsdom",
+    "coverage-site": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
+    "test-site:watch": "react-scripts test --env=jsdom",
+    "coverage-site:watch": "react-scripts test --env=jsdom --coverage",
+    "eject-site": "react-scripts eject",
+    "clean-site": "rm -fr build",
+    "lint-site": "eslint ./src --format table",
+    "lint": "yarn lint-site"
+  },
+  "dependencies": {
+    "typescript": "^3.0.0",
+    "reactjs-modular-starter-components": "^1.0.0",
+    "prop-types": "^15.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/react": "^10.0.0",
+    "@testing-library/user-event": "^10.0.0",
+    "@testing-library/dom": "^7.0.0",
+    "eslint": "^6.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

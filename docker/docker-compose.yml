@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  admin:
+    container_name: reactjs-modular-starter-admin
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./..
+      args:
+        SITE_TO_BUILD: admin
+    image: reactjs-modular-starter-admin
+    ports:
+      - 8080:80
+    networks:
+      reactjs-modular-starter-network:
+    restart: on-failure
+
+  portal:
+    container_name: reactjs-modular-starter-portal
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./..
+      args:
+        SITE_TO_BUILD: portal
+    image: reactjs-modular-starter-portal
+    ports:
+      - 8081:80
+    networks:
+      reactjs-modular-starter-network:
+    restart: on-failure
+
+networks:
+  reactjs-modular-starter-network:

@@ -1,0 +1,36 @@
+{
+  "name": "reactjs-modular-starter",
+  "private": true,
+  "author": {
+    "name": "Iordanis Kostelidis",
+    "email": "ikostelidis@datascouting.com",
+    "url": "https://datascouting.com"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "lerna exec yarn && lerna link",
+    "lint": "lerna run lint",
+    "release": "./scripts/make-release.sh",
+
+    "clean-components": "lerna run clean-components",
+    "build-components": "lerna run build-components",
+    "test-components": "lerna run test-components",
+    "coverage-components": "lerna run coverage-components",
+    "lint-components": "lerna run lint-components",
+
+    "clean-sites": "lerna run clean-site",
+    "build-sites": "yarn build-components && lerna run build-site",
+    "test-sites": "yarn build-components && lerna run test-site",
+    "coverage-sites": "yarn build-components && lerna run coverage-site",
+    "start-sites": "yarn build-components && lerna run start-site",
+    "lint-sites": "lerna run lint-site"
+  },
+  "dependencies": {
+    "prop-types": "^15.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "lerna": "^3.0.0"
+  }
+}
