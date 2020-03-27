@@ -26,6 +26,10 @@ yarn install
 ```
 
 ```shell script
+yarn start-components
+```
+
+```shell script
 yarn start-sites
 ```
 

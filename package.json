@@ -18,13 +18,14 @@
     "build-components": "lerna run build-components",
     "test-components": "lerna run test-components",
     "coverage-components": "lerna run coverage-components",
+    "start-components": "lerna run start-components",
     "lint-components": "lerna run lint-components",
 
     "clean-sites": "lerna run clean-site",
-    "build-sites": "yarn build-components && lerna run build-site",
-    "test-sites": "yarn build-components && lerna run test-site",
-    "coverage-sites": "yarn build-components && lerna run coverage-site",
-    "start-sites": "yarn build-components && lerna run start-site",
+    "build-sites": "lerna run build-site",
+    "test-sites": "lerna run test-site",
+    "coverage-sites": "lerna run coverage-site",
+    "start-sites": "lerna run start-site",
     "lint-sites": "lerna run lint-site"
   },
   "dependencies": {
